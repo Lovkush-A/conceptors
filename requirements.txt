@@ -1,0 +1,7 @@
+matplotlib==3.8.1
+numpy==1.24.3
+seaborn
+transformer_lens
+torch>=1.0.0
+pandas
+tqdm

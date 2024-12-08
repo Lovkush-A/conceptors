@@ -1,0 +1,36 @@
+# other files
+playground.ipynb
+logs/*
+hf_token.txt
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables files
+.env
+.venv
+env/
+venv/
+myenv/
+
+# Installed dependencies
+*.egg-info/
+*.egg
+*.pyd
+*.so
+
+# MacOS specific files
+.DS_Store
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Python-specific ignores
+*.pyc
