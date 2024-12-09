@@ -1,5 +1,7 @@
-
 # **Steering Large Language Models using Conceptors** 🛞
+
+[![arXiv](https://img.shields.io/badge/arXiv-2406.09477-b31b1b.svg)](https://arxiv.org/abs/2410.16314)
+
 
 This repository introduces a novel technique called "Conceptor-Based Activation Engineering," which we use to steer the behavior of a GPT-J-6B model. This method is inspired by recent advancements in activation engineering and steering techniques.
 
