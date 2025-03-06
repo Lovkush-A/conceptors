@@ -50,6 +50,7 @@ def run_baseline_experiments(
     fname = _get_filename(results_path, model_id, task, "baseline")
     print(f"Storing results to `{fname}`")
 
+    # TODO: make this configurable
     batch_size = 50
     baseline_data = []
 

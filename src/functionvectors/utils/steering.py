@@ -97,9 +97,15 @@ def top_1_first_tokens(model, prompts: List[str], fwd_hooks=[]):
     with model.hooks(fwd_hooks=fwd_hooks):
         model.tokenizer.padding_side = "left"
         input_prompts_tokenized = model.to_tokens(prompts)
+
+        # shape: (batch_size, n_tokens, n_vocab)
         logits, _ = model.run_with_cache(input_prompts_tokenized, remove_batch_dim=True)
+
+        # shape: (batch_size, n_vocab)
         next_logits = logits[:, -1, :]
         next_probabilities = next_logits.softmax(dim=-1)
+
+        # shape: (batch_size,)
         top_indices = torch.argmax(next_probabilities, dim=-1)
 
         for index in top_indices:

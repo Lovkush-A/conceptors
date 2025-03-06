@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--task", "present-past",
+                "--model_name", "EleutherAI/gpt-j-6b",
+                "--experiment_type", "baseline",
+                "--num_steering_prompts", "15",
+                "--num_steering_examples_per_prompt", "7",
+                "--num_input_prompts", "200",
+                "--num_experiments", "1",
+                "--batch_size", "50",
+                "--save_results", "True",
+            ]
+        }
+    ]
+}
