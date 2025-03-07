@@ -13,7 +13,7 @@
             "args": [
                 "--task", "present-past",
                 "--model_name", "EleutherAI/gpt-j-6b",
-                "--experiment_type", "baseline",
+                "--experiment_type", "addition",
                 "--num_steering_prompts", "15",
                 "--num_steering_examples_per_prompt", "7",
                 "--num_input_prompts", "200",

@@ -35,7 +35,10 @@ if __name__ == "__main__":
 
     # Assign parsed arguments to variables
     TASK = args.task
+    BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     RESULTS_PATH = args.results_path
+    if RESULTS_PATH == "../../Results/":
+        RESULTS_PATH = os.path.join(BASE_PATH, "Results")
     MODEL_NAME = args.model_name
     DTYPE = args.dtype
     SAVE_RESULTS = args.save_results
@@ -43,7 +46,6 @@ if __name__ == "__main__":
     NUM_STEERING_EXAMPLES_PER_PROMPT = args.num_steering_examples_per_prompt
     NUM_INPUT_PROMPTS = args.num_input_prompts
     NUM_EXPERIMENTS = args.num_experiments
-    BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     STEERING_PROMPTS_PATH = os.path.join(BASE_PATH, "data", "functionvectors", f"{args.task}.json")
     experiment_type = ExperimentType(args.experiment_type)
     BATCH_SIZE = args.batch_size

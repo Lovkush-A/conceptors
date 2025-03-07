@@ -8,7 +8,25 @@ def cache_activation_vectors(
     activations_cache: Dict[int, Dict[int, np.ndarray]],
     list_extraction_layers: List[int],
     num_experiments: int,
-):
+) -> Dict[int, Dict[int, torch.Tensor]]:
+    """
+    Precomputes averaged activations for all layers and experiments.
+
+    Args:
+        activations_cache: dictionary containing the activations for each experiment and layer.
+            Keys are (experiment_index) then (layer_index) and values are the activations.
+            Shape of values: (NUM_STEERING_PROMPTS, d_model).
+            (NUM_STEERING_PROMPTS is number of prompts used to train the steering vector per experiment.)
+        list_extraction_layers: list of layers to extract activations from.
+            Redundant, as it should be in activations_cache.
+        num_experiments: number of experiments to precompute activations for.
+            Redundant, as it should be in activations_cache.
+
+    Returns:
+        averaged_activations_cache: dictionary containing the averaged activations for each experiment and layer.
+            Keys are (experiment_index) then (layer_index) and values are the averaged activations.
+            Shape of values: (d_model,).
+    """
     # Initialize a dictionary to store averaged activations for each experiment
     averaged_activations_cache = {exp: {} for exp in range(num_experiments)}
 

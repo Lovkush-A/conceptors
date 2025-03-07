@@ -289,6 +289,10 @@ def run_all_actadd_experiments(
         batch_size (int): The batch size for the experiments.
         mean_train_activations (Optional[dict]): The mean activations for each layer.
         verbose (bool): Whether to print verbose output.
+    
+    Returns:
+        results (list): The results of the experiments.
+        Each element is a dictionary containing the results of an experiment.
     """
     results = []
 
